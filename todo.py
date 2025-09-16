@@ -28,8 +28,18 @@ def show_tasks(todos: list[list[str, bool]]) -> None:
 
 
 def delete_task(todos: list[list[str, bool]]) -> None:
-    pass
-
+    
+    num=input("Ochirish uchun sonni kiriting: ")
+    num=int(num)
+    if num.isdigit():
+        num=int(num)
+        if 1<=num<=len(todos):
+            removed = todos.pop(num-1)
+            print(f"'{removed[0]}' ochirildi")
+        else:
+            print("Xatolik!")
+    else:
+        print("Raqam notogri")
 
 def update_task(todos: list[list[str, bool]]) -> None:
     pass
